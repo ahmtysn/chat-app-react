@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
-import TextContainer from './TextContainer';
+import Header from './Header';
+import SideBarInfo from './SideBarInfo';
 import Messages from './Messages';
-import InfoBar from './InfoBar';
 import Input from './Input';
 
 import '../App.css';
@@ -56,7 +56,8 @@ const Chat = ({ location }) => {
   return (
     <div className='App'>
       <div>
-        <InfoBar room={room} />
+        <Header name={name} room={room} />
+        <SideBarInfo users={users} />
         <Messages messages={messages} name={name} />
         <Input
           message={message}
@@ -64,7 +65,6 @@ const Chat = ({ location }) => {
           sendMessage={sendMessage}
         />
       </div>
-      <TextContainer users={users} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextContainer = ({ users }) => (
+const SideBarInfo = ({ users }) => (
   <div>
     {users && (
       <div>
@@ -19,4 +19,4 @@ const TextContainer = ({ users }) => (
   </div>
 );
 
-export default TextContainer;
+export default SideBarInfo;

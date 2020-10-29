@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import ReactEmoji from 'react-emoji';
 
 const Message = ({ message: { user, text, time }, name }) => {
-  let isSentByCurrentUser = false;
+  let sentByUser = false;
 
-  const trimmedName = name.trim().toLowerCase();
-
-  if (user === trimmedName) {
-    isSentByCurrentUser = true;
+  if (user === name) {
+    sentByUser = true;
   }
 
   return (
     <div>
-      <p>{isSentByCurrentUser ? trimmedName : user}</p>
+      <p>{sentByUser ? name : user}</p>
       <p>{time}</p>
       <div>
         <p>{ReactEmoji.emojify(text)}</p>
