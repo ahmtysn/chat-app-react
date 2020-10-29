@@ -7,6 +7,8 @@ import Messages from './Messages';
 import InfoBar from './InfoBar';
 import Input from './Input';
 
+import '../App.css';
+
 const ENDPOINT = 'localhost:5000';
 
 let socket;
@@ -52,7 +54,7 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div>
+    <div className='App'>
       <div>
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
