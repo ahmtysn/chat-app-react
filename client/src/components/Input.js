@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Input = ({ setMessage, sendMessage, message }) => {
-  console.log({ message });
+  
   const changeHandler = e => {
     const value = e.target.value;
     if (value.trim()) {
