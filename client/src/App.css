@@ -23,24 +23,3 @@ a {
   font-size: 2.2rem;
   color: #3f51b5;
 }
-.chat-header {
-  background-color: #fbdcc4;
-  padding: 50px;
-  color: #7d0633;
-  /* margin-bottom: 50px; */
-}
-.chat-body {
-  padding: 50px;
-  color: #31112c;
-  background-color: aqua;
-  min-height: 60vh;
-}
-.chat-message {
-  background-color: #d2e603;
-}
-.chat-input a {
-  color: #3f51b5;
-  font-size: x-large;
-}
-.sidebar {
-}

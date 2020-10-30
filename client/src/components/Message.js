@@ -12,13 +12,13 @@ const Message = ({ message: { user, text, time }, name }) => {
   }
 
   return (
-    <Grid container>
+    <div>
       <p>{sentByUser ? name : user}</p>
       <p>{time}</p>
       <div>
         <p>{ReactEmoji.emojify(text)}</p>
       </div>
-    </Grid>
+    </div>
   );
 };
 
