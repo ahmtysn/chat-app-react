@@ -1,6 +1,6 @@
 # Realtime Chat Application
 
-### [Live Site](https://www.twitter.com)
+### [Live Site](https://5f9c6d6ad4709a38bcd4fd0f--loving-engelbart-ad9d28.netlify.app/)
 
 ## Introduction
 
@@ -12,4 +12,9 @@ By the end of this video, you will have a strong understanding of how to send an
 
 Setup:
 
+```
 - run `npm i && npm start` for both client and server side to start the development server
+```
+
+  <img src = "images/chat1.png" />
+  <img src = "images/chat2.png" />

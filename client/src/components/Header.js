@@ -1,20 +1,26 @@
 import React from 'react';
-import { AiFillCloseCircle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const Header = ({ name, room }) => {
   return (
-    <div>
-      <h2>Welcome to Special Chat World</h2>
-      <Link to='/'>
-        <AiFillCloseCircle />
-      </Link>
-      <p>created by @ahmtysn</p>
-      <p>
-        You are now in <span style={{ fontWeight: 'bolder' }}>{room}</span>{' '}
-        room.
-      </p>
-    </div>
+    <Grid container alignItems='center'>
+      <Grid item xs={8}>
+        <Typography variant='h3' gutterBottom>
+          Welcome to Special Chat World
+        </Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <Typography variant='h6' gutterBottom>
+          @ahmtysn
+        </Typography>
+        <Typography variant='subtitle2' gutterBottom>
+          you are now in <span style={{ fontWeight: 'bolder' }}>{room}</span>{' '}
+          room
+        </Typography>
+      </Grid>
+    </Grid>
   );
 };
 

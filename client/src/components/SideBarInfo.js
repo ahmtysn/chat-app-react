@@ -1,22 +1,25 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
 const SideBarInfo = ({ users }) => (
-  <div>
+  <Grid container className='sidebar'>
     {users && (
       <div>
-        <h1>People currently chatting:</h1>
-        <div className='activeContainer'>
-          <h2>
-            {users.map(({ name }) => (
-              <div key={name} className='activeItem'>
-                {name}
-              </div>
-            ))}
-          </h2>
-        </div>
+        <Typography variant='h4' gutterBottom>
+          Online Users
+        </Typography>
+        <Typography variant='subtitle1' gutterBottom>
+          {users.map(({ name }) => (
+            <div key={name} className='activeItem'>
+              {name}
+            </div>
+          ))}
+        </Typography>
       </div>
     )}
-  </div>
+  </Grid>
 );
 
 export default SideBarInfo;

@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
+import '../App.css';
+
 import Header from './Header';
 import SideBarInfo from './SideBarInfo';
 import Messages from './Messages';
 import Input from './Input';
 
-import '../App.css';
+import Grid from '@material-ui/core/Grid';
 
-const ENDPOINT = 'localhost:5000';
+const ENDPOINT = 'https://react-chat-ayk.herokuapp.com/'; // localhost:5000
 
 let socket;
 
@@ -54,18 +56,24 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div className='App'>
-      <div>
+    <Grid container className='App'>
+      <Grid item xs={12} className='chat-header'>
         <Header name={name} room={room} />
-        <SideBarInfo users={users} />
-        <Messages messages={messages} name={name} />
-        <Input
-          message={message}
-          setMessage={setMessage}
-          sendMessage={sendMessage}
-        />
-      </div>
-    </div>
+      </Grid>
+      <Grid item container xs={12} className='chat-body'>
+        <Grid item xs={3}>
+          <SideBarInfo users={users} />
+        </Grid>
+        <Grid item xs={9} className='chat-message'>
+          <Messages messages={messages} name={name} />
+          <Input
+            message={message}
+            setMessage={setMessage}
+            sendMessage={sendMessage}
+          />
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 
