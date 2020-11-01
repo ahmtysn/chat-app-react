@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Grid, Divider, Box, makeStyles } from '@material-ui/core';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
@@ -13,7 +14,20 @@ const ENDPOINT = 'https://react-chat-ayk.herokuapp.com/'; // localhost:5000
 
 let socket;
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    height: '100%',
+  },
+  chatContainer: {
+    height: '100%',
+    '& > div': {
+      height: '100%',
+    },
+  },
+}));
+
 const Chat = ({ location }) => {
+  const classes = useStyles();
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
@@ -54,15 +68,21 @@ const Chat = ({ location }) => {
   };
 
   return (
-    <div container className='App'>
+    <div className={classes.root}>
       <Header name={name} room={room} />
-      <SideBarInfo users={users} />
-      <Messages messages={messages} name={name} />
-      <Input
-        message={message}
-        setMessage={setMessage}
-        sendMessage={sendMessage}
-      />
+      <Grid container className={classes.chatContainer}>
+        <Box component={Grid} item md={3} display={{ xs: 'none', md: 'block' }}>
+          <SideBarInfo users={users} />
+        </Box>
+        <Grid item xs={12} md={9}>
+          <Messages messages={messages} name={name} />
+          <Input
+            message={message}
+            setMessage={setMessage}
+            sendMessage={sendMessage}
+          />
+        </Grid>
+      </Grid>
     </div>
   );
 };
