@@ -1,6 +1,4 @@
 import React from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
 
 const Input = ({ setMessage, sendMessage, message }) => {
   const changeHandler = e => {
@@ -20,9 +18,6 @@ const Input = ({ setMessage, sendMessage, message }) => {
         onChange={changeHandler}
       />
       <button onClick={e => sendMessage(e)}>Send</button>
-      <Link to='/'>
-        <AiOutlineHome />
-      </Link>
     </form>
   );
 };

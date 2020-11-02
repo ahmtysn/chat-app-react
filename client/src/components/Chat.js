@@ -21,8 +21,15 @@ const useStyles = makeStyles(theme => ({
   chatContainer: {
     height: '100%',
     '& > div': {
-      height: '100%',
+      height: '80%',
     },
+  },
+  chatMessage: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    backgroundColor: '#132743',
+    color: '#edc988',
   },
 }));
 
@@ -71,10 +78,16 @@ const Chat = ({ location }) => {
     <div className={classes.root}>
       <Header name={name} room={room} />
       <Grid container className={classes.chatContainer}>
-        <Box component={Grid} item md={3} display={{ xs: 'none', md: 'block' }}>
-          <SideBarInfo users={users} />
+        <Box
+          component={Grid}
+          item
+          sm={3}
+          display={{ xs: 'none', sm: 'block' }}
+          style={{ backgroundColor: '#edc988' }}
+        >
+          <SideBarInfo users={users} style={{ height: '100vh' }} />
         </Box>
-        <Grid item xs={12} md={9}>
+        <Grid item xs={12} sm={9} className={classes.chatMessage}>
           <Messages messages={messages} name={name} />
           <Input
             message={message}

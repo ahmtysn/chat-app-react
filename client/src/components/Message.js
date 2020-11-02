@@ -1,23 +1,41 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import ReactEmoji from 'react-emoji';
 
-import Grid from '@material-ui/core/Grid';
+const Message = ({ message: { text, user, time }, name }) => {
+  let isCurrentUser = false;
 
-const Message = ({ message: { user, text, time }, name }) => {
-  let sentByUser = false;
+  const trimmedName = name.trim().toLowerCase();
 
-  if (user === name) {
-    sentByUser = true;
+  if (user === trimmedName) {
+    isCurrentUser = true;
   }
 
-  return (
-    <div>
-      <p>{sentByUser ? name : user}</p>
+  return isCurrentUser ? (
+    <div
+      style={{
+        color: 'd7385e',
+        border: '1px solid red',
+        width: '40%',
+        padding: '10px',
+      }}
+    >
+      <p>{trimmedName}</p>
+      <p>{ReactEmoji.emojify(text)}</p>
       <p>{time}</p>
-      <div>
-        <p>{ReactEmoji.emojify(text)}</p>
-      </div>
+    </div>
+  ) : (
+    <div
+      style={{
+        color: '#d7385e',
+        border: '1px solid yellow',
+        width: '40%',
+        padding: '10px',
+      }}
+    >
+      <p>{user}</p>
+      <p>{ReactEmoji.emojify(text)}</p>
+      <p>{time}</p>
     </div>
   );
 };
