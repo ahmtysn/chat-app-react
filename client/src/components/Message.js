@@ -2,6 +2,8 @@ import React from 'react';
 
 import ReactEmoji from 'react-emoji';
 
+import './message.css';
+
 const Message = ({ message: { text, user, time }, name }) => {
   let isCurrentUser = false;
 
@@ -12,30 +14,20 @@ const Message = ({ message: { text, user, time }, name }) => {
   }
 
   return isCurrentUser ? (
-    <div
-      style={{
-        color: 'd7385e',
-        border: '1px solid red',
-        width: '40%',
-        padding: '10px',
-      }}
-    >
-      <p>{trimmedName}</p>
-      <p>{ReactEmoji.emojify(text)}</p>
-      <p>{time}</p>
+    <div className='messageContainer justifyEnd'>
+      <p className='sentText pr-10'>{trimmedName}</p>
+      <div className='messageBox backgroundBlue'>
+        <p className='messageText colorWhite'>{ReactEmoji.emojify(text)}</p>
+        <p className='timeText colorWhite'>{time}</p>
+      </div>
     </div>
   ) : (
-    <div
-      style={{
-        color: '#d7385e',
-        border: '1px solid yellow',
-        width: '40%',
-        padding: '10px',
-      }}
-    >
-      <p>{user}</p>
-      <p>{ReactEmoji.emojify(text)}</p>
-      <p>{time}</p>
+    <div className='messageContainer justifyStart'>
+      <p className='sentText pr-10 '>{user}</p>
+      <div className='messageBox backgroundLight'>
+        <p className='messageText colorDark'>{ReactEmoji.emojify(text)}</p>
+        <p className='timeText colorDark'>{time}</p>
+      </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@ io.on('connect', socket => {
 
     socket.emit(
       'message',
-      formatMessage('admin', `${user.name}, Welcome to room ${user.room}.`),
+      formatMessage('admin', `${user.name}, welcome to room ${user.room}.`),
     );
     socket.broadcast
       .to(user.room)

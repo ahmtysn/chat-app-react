@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Divider, Box, makeStyles } from '@material-ui/core';
+import { Grid, Box, makeStyles } from '@material-ui/core';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 import '../App.css';
+
 import Header from './Header';
 import SideBarInfo from './SideBarInfo';
 import Messages from './Messages';
 import Input from './Input';
+
 const ENDPOINT = 'https://react-chat-ayk.herokuapp.com/'; // localhost:5000
 let socket;
 const useStyles = makeStyles(theme => ({
@@ -21,7 +23,8 @@ const useStyles = makeStyles(theme => ({
   chats: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#132743',
+    backgroundImage:
+      'url(' + 'https://wallpaperaccess.com/full/1288171.jpg' + ')',
     color: '#EDC988',
   },
   messages: {
@@ -71,9 +74,9 @@ const Chat = ({ location }) => {
           item
           sm={3}
           display={{ xs: 'none', sm: 'block' }}
-          style={{ backgroundColor: '#EDC988', flex: 1 }}
+          style={{ backgroundColor: '#323739', flex: 1 }}
         >
-          <SideBarInfo users={users} />
+          <SideBarInfo users={users} messages={messages} />
         </Box>
         <Grid item xs={12} sm={9} className={classes.chats}>
           <Messages
