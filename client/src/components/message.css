@@ -56,14 +56,16 @@
 
 .colorWhite {
   color: white;
+  font-weight: bold;
 }
 
 .colorDark {
   color: #353535;
+  font-weight: bold;
 }
 
 .backgroundBlue {
-  background: #2979ff;
+  background: #2b4d4b;
 }
 
 .backgroundLight {

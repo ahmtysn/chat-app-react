@@ -6,13 +6,18 @@ const SideBarInfo = ({ users, messages }) => {
     <div style={{ padding: '30px' }}>
       {users && messages && (
         <div>
-          <div style={{ textAlign: 'center', color: '#fff' }}>
-            <img
-              style={{ width: '40%' }}
-              src='https://cdn3.iconfinder.com/data/icons/communication-media-malibu-vol-1/128/mobile-messaging-512.png'
-              alt='chat-logo'
-            />
-            <Typography variant='h5' gutterBottom>
+          <div style={{ textAlign: 'center', color: '#29735d' }}>
+            <Typography
+              variant='h5'
+              gutterBottom
+              style={{
+                fontWeight: 'bolder',
+                borderTop: '2px solid #29735d',
+                borderBottom: '2px solid #29735d',
+                padding: '10px',
+                marginBottom: '10%',
+              }}
+            >
               Online Users
             </Typography>
             <Typography variant='subtitle1' gutterBottom>
@@ -22,7 +27,8 @@ const SideBarInfo = ({ users, messages }) => {
                   style={{
                     color: '#333',
                     backgroundColor: '#f3f3f3',
-                    borderRadius: '20px',
+                    borderRadius: '10px',
+                    fontWeight: 'bolder',
                     padding: '10px',
                     marginBottom: '2px',
                   }}

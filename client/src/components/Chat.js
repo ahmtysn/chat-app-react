@@ -9,14 +9,20 @@ import SideBarInfo from './SideBarInfo';
 import Messages from './Messages';
 import Input from './Input';
 
-const ENDPOINT = 'https://react-chat-ayk.herokuapp.com/'; // localhost:5000
+const ENDPOINT = 'localhost:5000'; //'https://react-chat-ayk.herokuapp.com/'
 let socket;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
+    // backgroundImage:
+    //   'url(' +
+    //   'https://images.pexels.com/photos/193349/pexels-photo-193349.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260' +
+    //   ')',
+    // backgroundSize: 'cover',
   },
+
   chatContainer: {
     flex: 1,
   },
@@ -24,7 +30,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     backgroundImage:
-      'url(' + 'https://wallpaperaccess.com/full/1288171.jpg' + ')',
+      'url(' +
+      'https://images.pexels.com/photos/193349/pexels-photo-193349.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260' +
+      ')',
+    backgroundSize: 'cover',
     color: '#EDC988',
   },
   messages: {
@@ -74,7 +83,10 @@ const Chat = ({ location }) => {
           item
           sm={3}
           display={{ xs: 'none', sm: 'block' }}
-          style={{ backgroundColor: '#323739', flex: 1 }}
+          style={{
+            backgroundColor: '#28272a',
+            flex: 1,
+          }}
         >
           <SideBarInfo users={users} messages={messages} />
         </Box>

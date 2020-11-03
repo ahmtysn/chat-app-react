@@ -18,3 +18,4 @@ Setup:
 
   <img src = "images/chat1.png" />
   <img src = "images/chat2.png" />
+  <img src = "images/chat3.png" />

@@ -10,17 +10,25 @@ const Header = ({ name, room }) => {
       style={{
         display: 'flex',
         justifyContent: 'space-between',
-        backgroundColor: '#323739',
+        backgroundColor: '#28272a',
         color: '#fff',
+        borderBottom: '2px solid #999',
       }}
     >
       <Link to='/' style={{ display: 'flex', color: '#fff' }}>
         <BiArrowBack style={{ marginRight: '10px', fontSize: '1.5rem' }} />
       </Link>
-      <Typography variant='subtitle2' gutterBottom>
-        You are now in <span style={{ fontWeight: 'bolder' }}>{room}</span>{' '}
-        room...
-      </Typography>
+      <div style={{ textAlign: 'center' }}>
+        <Typography variant='h5' gutterBottom>
+          welcome to coders chat
+          <span style={{ fontWeight: 'bolder' }}> {name}!</span>
+        </Typography>
+        <Typography variant='subtitle2' gutterBottom>
+          ...you are now in <span style={{ fontWeight: 'bolder' }}>{room}</span>{' '}
+          room...
+        </Typography>
+      </div>
+
       <BiHelpCircle style={{ marginRight: '10px', fontSize: '1.5rem' }} />
     </div>
   );

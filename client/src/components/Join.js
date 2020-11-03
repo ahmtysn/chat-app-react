@@ -62,31 +62,25 @@ export default function SignIn() {
         <FormControl>
           <Select onChange={getRoom}>
             <MenuItem value=''>None</MenuItem>
-            <MenuItem value='Relation'>Relation</MenuItem>
-            <MenuItem value='Family'>Family</MenuItem>
-            <MenuItem value='Activity'>Activity</MenuItem>
-            <MenuItem value='Secret'>Secret</MenuItem>
-            <MenuItem value='Technology'>Technology</MenuItem>
-            <MenuItem value='Hobby'>Hobby</MenuItem>
-            <MenuItem value='Cinema'>Cinema</MenuItem>
-            <MenuItem value='Others'>Others</MenuItem>
+            <MenuItem value='JavaScript'>JavaScript</MenuItem>
+            <MenuItem value='Python'>Python</MenuItem>
+            <MenuItem value='PHP'>PHP</MenuItem>
+            <MenuItem value='Java'>Java</MenuItem>
+            <MenuItem value='C#'>C#</MenuItem>
+            <MenuItem value='Library'>Library</MenuItem>
+            <MenuItem value='FrameWork'>FrameWork</MenuItem>
+            <MenuItem value='Packages'>Packages</MenuItem>
           </Select>
-          <FormHelperText>Select or create your special room!</FormHelperText>
+          <FormHelperText>
+            Find other develepors with one click !
+          </FormHelperText>
         </FormControl>
         <form>
           <div style={{ margin: '20px' }}>
             <TextField placeholder='Name' type='text' onChange={getName} />
           </div>
-          <div style={{ marginBottom: '20px' }}>
-            <TextField
-              placeholder='Room'
-              value={room}
-              type='text'
-              onChange={getRoom}
-            />
-          </div>
           <Link to={filled && `/chat?name=${name}&room=${room}`}>
-            <Button type='submit' variant='contained' color='primary'>
+            <Button type='submit' variant='contained'>
               Join Chat
             </Button>
           </Link>

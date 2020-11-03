@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './input.css';
+
 const Input = ({ setMessage, sendMessage, message }) => {
   const changeHandler = e => {
     const value = e.target.value;
@@ -10,14 +12,17 @@ const Input = ({ setMessage, sendMessage, message }) => {
     }
   };
   return (
-    <form>
+    <form className='form'>
       <input
+        className='input'
         type='text'
         placeholder='Type a message...'
         value={message}
         onChange={changeHandler}
       />
-      <button onClick={e => sendMessage(e)}>Send</button>
+      <button className='sendButton' onClick={e => sendMessage(e)}>
+        Send
+      </button>
     </form>
   );
 };
