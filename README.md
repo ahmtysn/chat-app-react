@@ -16,6 +16,6 @@ Setup:
 - run `npm i && npm start` for both client and server side to start the development server
 ```
 
-  <img src = "images/home.png" />
-  <img src = "images/selection.png" />
+  <img src = "images/home-page.png" />
+  <img src = "images/select-room.png" />
   <img src = "images/chat-menu.png" />

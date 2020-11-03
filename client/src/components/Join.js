@@ -44,7 +44,7 @@ export default function SignIn() {
       <Grid item container xs={12} alignItems='center' className='home-header'>
         <Grid item xs={8}>
           <Typography variant='h3' gutterBottom>
-            Welcome to Free Chat App
+            Welcome to Coders Chat
           </Typography>
         </Grid>
         <Grid item xs={4}>
