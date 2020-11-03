@@ -1,6 +1,6 @@
 # Realtime Chat Application
 
-### [Live Site](https://5f9eda33938901923f19e77f--loving-engelbart-ad9d28.netlify.app/)
+### [Live Site](https://5fa1a7e81c1e7c0093456132--loving-engelbart-ad9d28.netlify.app/)
 
 ## Introduction
 
