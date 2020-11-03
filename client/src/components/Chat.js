@@ -9,18 +9,13 @@ import SideBarInfo from './SideBarInfo';
 import Messages from './Messages';
 import Input from './Input';
 
-const ENDPOINT = 'localhost:5000'; //'https://react-chat-ayk.herokuapp.com/'
+const ENDPOINT = 'https://react-chat-ayk.herokuapp.com/'; //'localhost:5000';
 let socket;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    // backgroundImage:
-    //   'url(' +
-    //   'https://images.pexels.com/photos/193349/pexels-photo-193349.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260' +
-    //   ')',
-    // backgroundSize: 'cover',
   },
 
   chatContainer: {
